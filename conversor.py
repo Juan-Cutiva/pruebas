@@ -1,5 +1,5 @@
 import os
-from print import lobby_image, final_image
+from print import lobby_image, final_image, image_cero, image_negative
 
 def conversor(tipo_moneda, valor_dolar):
     os.system("cls")
@@ -7,8 +7,15 @@ def conversor(tipo_moneda, valor_dolar):
     dolares = pesos / valor_dolar
     dolares = str(round(dolares, 2))
     os.system("cls")    
-    result = print("Tienes $" + dolares + " dólares" + final_image)
+    if float(dolares) < 0:
+        print("No puedes ingresar numeros negativos, intenta otra vez." + image_negative )
+    elif float(dolares) == 0:
+        print("No puedes ingresar 0, intenta otra vez." + image_cero)
+    else:
+        result = print("Tienes $" + dolares + " dólares" + final_image)
  
+
+    
 
 os.system("cls")
 lobby_image = int(input(lobby_image))
