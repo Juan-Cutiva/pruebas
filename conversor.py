@@ -15,7 +15,6 @@ def conversor(tipo_moneda, valor_dolar):
         result = print("Tienes $" + dolares + " dólares" + final_image)
  
 
-    
 
 os.system("cls")
 lobby_image = int(input(lobby_image))
